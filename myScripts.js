@@ -1,8 +1,20 @@
+var btn = document.getElementById('btn');
+// hiding game before start
+var divsToHide = document.getElementsByClassName("container");
+for(var i = 0; i < divsToHide.length; i++){
+  divsToHide[i].style.display = "none"; 
+}
+function start()
+{
 var playerone = prompt('Player One: Enter Your Name, you will be Red');
 var player1color = 'rgb(244, 65, 65)';
 
 var playertwo = prompt('Player Two: Enter Your Name, you will be Blue');
 var player2color = 'rgb(66, 134, 244)';
+
+for(var i = 0; i < divsToHide.length; i++){
+  divsToHide[i].style.display = "block"; // or
+  }
 
 //grab elements on table
 var game_on = true;
@@ -129,3 +141,5 @@ $('.board button').on('click', function(){
 	}
 
 });
+btn.style.display = "none";
+}

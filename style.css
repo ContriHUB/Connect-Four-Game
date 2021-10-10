@@ -47,3 +47,31 @@ body{
 	position: fixed;
 	bottom:0;
 }
+
+.name1{
+	position: absolute;
+	right: 78%;
+	margin-top: 10%;
+
+	font-size: 48px;
+  	color: rgb(12, 7, 7);
+}
+
+.name2{
+	position: absolute;
+	left: 78%;
+	margin-top: 10%;
+}
+
+.edit{
+	animation: edit 1s ease-in-out infinite alternate;
+}
+
+@keyframes edit {
+	from {
+		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #df368a, 0 0 30px #df368a, 0 0 40px #df368a, 0 0 50px #df368a, 0 0 60px #df368a;
+	  }
+	to {
+	  text-shadow: 0 0 10px #fff, 0 0 20px #fa99ca, 0 0 30px #fa99ca, 0 0 40px #fa99ca, 0 0 50px #fa99ca, 0 0 60px #fa99ca, 0 0 70px #fa99ca;
+	}
+}

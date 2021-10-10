@@ -22,6 +22,12 @@ var currentPlayer=1;
 var currentName=playerone;
 var currentColor=player1color;
 
+let player1 = document.querySelector(".name1")
+let player2 = document.querySelector(".name2")
+
+player1.textContent = playerone
+player2.textContent = playertwo
+
 $('h3').text(playerone + " it is your turn, pick a column to drop in!");
 
 
@@ -42,10 +48,12 @@ $('.board button').on('click', function(){
 	currentPlayer = currentPlayer * -1;
 
 	if (currentPlayer === 1){
+    document.getElementByClass("name1").classList.add('edit');
 		currentName = playerone;
 		$('h3').text(currentName + " it is your turn.");
 		currentColor = player1color;
 	}else {
+    document.getElementByClass("name2").classList.add('edit');
 		currentName = playertwo;
 		$('h3').text(currentName + " it is your turn.");
 		currentColor = player2color;
